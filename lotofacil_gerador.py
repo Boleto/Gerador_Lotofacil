@@ -28,7 +28,6 @@ async def atualizar_base_dados():
             df_existente = pd.read_csv(ARQUIVO_CACHE)
             if not df_existente.empty:
                 ultimo_salvo = df_existente['concurso'].max()
-                # --- SEU PRINT SOLICITADO ---
                 print(f" > Base local carregada. Último: {ultimo_salvo}")
         except: pass
 
@@ -39,13 +38,13 @@ async def atualizar_base_dados():
                 if resp.status != 200: return df_existente
                 ultimo_real = (await resp.json())['numero']
         except: return df_existente
-
+            
+        #Verifica se a base já está atualizada
         if ultimo_real <= ultimo_salvo:
-            # --- SEU PRINT SOLICITADO ---
             print(" -> Base já está atualizada.")
             return df_existente
 
-        # 3. Baixa se precisar
+        # 3. Baixa jogos novos se houver necessidade
         tarefas = [buscar_concurso(session, n) for n in range(ultimo_salvo + 1, ultimo_real + 1)]
         novos = await asyncio.gather(*tarefas)
         novos = [n for n in novos if n]
@@ -89,7 +88,7 @@ def main():
     df = asyncio.run(atualizar_base_dados())
     if df.empty: return print("Erro: Base vazia.")
 
-    # --- PAINEL DE CONTROLE ---
+    # --- PAINEL DE CONTROLE (É POSSÍVEL ALTERAR AS VARIÁVEIS AQUI)---
     JANELA_CURTA = 10   
     JANELA_LONGA = 100   
     # --------------------------
@@ -123,4 +122,5 @@ def main():
     print("="*40)
 
 if __name__ == "__main__":
+
     main()
