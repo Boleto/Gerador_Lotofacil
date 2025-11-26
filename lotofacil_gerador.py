@@ -104,7 +104,7 @@ def main():
     acertos = len(set(palpite) & set(dezenas_reais))
     
     msg = "Sem prêmio"
-    if acertos >= 15: 
+    if acertos == 15: 
         msg = "🚨 15 PONTOS (MÁXIMO)!"
     elif acertos == 14: 
         msg = "💰 14 PONTOS!"
@@ -124,3 +124,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
