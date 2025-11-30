@@ -61,8 +61,10 @@ Cada uma das combinações geradas passa por um "crivo" rigoroso. Só é aprovad
    
 ⚠️ **Disclaimer**
 
-Este software é uma ferramenta de estudo estatístico e não garante lucros. 
-Loterias são jogos de azar e os resultados passados não garantem resultados futuros. Jogue com responsabilidade.
+Este software é uma ferramenta de estudo estatístico e não garante lucros.<br>
+Loterias são jogos de azar e os resultados passados não garantem resultados futuros.<br>
+Jogue com responsabilidade.
+
 
 📝 **Licença**
 
