@@ -4,7 +4,7 @@
 
 > *"Aqueles que planejam com antecedência vencem a batalha antes mesmo de ela começar."*
 
-Este é o módulo de **Análise Quantitativa Avançada** para a Lotofácil. Diferente de geradores aleatórios ou baseados apenas em frequência simples, este algoritmo aplica conceitos de **Data Science**, **Combinatória** e **Filtragem Estatística** para encontrar o jogo matematicamente ideal.
+Este é um programa em Python para jogar na Lotofácil. Diferente de geradores aleatórios ou baseados apenas em frequência simples, este algoritmo aplica conceitos de **Data Science**, **Combinatória** e **Filtragem Estatística** para encontrar o jogo matematicamente ideal.
 
 ![Python](https://img.shields.io/badge/Python-3.12+-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-Analytics-150458?style=for-the-badge&logo=pandas&logoColor=white)
